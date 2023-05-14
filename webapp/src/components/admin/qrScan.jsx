@@ -5,11 +5,13 @@ import {Link, useNavigate} from 'react-router-dom'
 import QrReader from 'react-qr-scanner'
 import jsCookies from 'js-cookies'
 import {toast, ToastContainer} from 'react-toastify'
+import QRScanner from 'qr-scanner'
 
 
 const ScanQR = () => {
     const navigate = useNavigate();
     const [isLoading, setIsLoading] = useState(true);
+    const [image, setImage] = useState();
 
     const showAlert = (text) => toast.error(text, {
         position: "top-right",
@@ -39,6 +41,10 @@ const ScanQR = () => {
         }
     }
 
+    const findStudentByQR = async ()=>{
+        const result = await QRScanner.scanImage(image);
+        navigate('/admin/student/check/' + result);
+    }
 
     return (
     <div>
@@ -60,6 +66,12 @@ const ScanQR = () => {
                     <h4 className='text-center'>Scan Student QR Code to View Data</h4>
                     <p className='text-center'>If you have student's qr code it's easy to find student data.please scan to view student data.</p>
                     <div className="text-center">
+                        <div className="mt-5">
+                            <input type="file" onChange={(e)=>setImage(e.target.files[0])}/>
+                            <button className='btn btn-md btn-primary' style={{marginLeft : '40px'}} onClick={findStudentByQR}>Scan Uploaded QR Image</button>
+                        </div>
+                        <hr/>
+                        <div className='text-center'>Or Scan Using Camera</div>
                         <QrReader
                             style = {{width : 400, height : 600}}
                             delay = {1000}
