@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Roboto+Slab:wght@900&family=Tilt+Neon&display=swap');
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Login Page Styles */
+.login-content{
+  height: 100vh;
+  width: 100%;
+  background: rgb(17, 20, 54);
+}
+.login-content .login-form{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fff;
+  padding: 30px 30px;
+  width: 30%;
+  background: rgba(255, 255, 255, 0.1);
+}
+.login-content .login-form input{
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgb(250, 231, 231);
+  color: #fff;
+  width: 90%;
+  margin-left: 5%;
+  letter-spacing: 1px;
+}
+.login-content .login-form input:focus{
+  outline: none;
+}
+.login-content .login-form input::placeholder{
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: .8rem;
+}
+.login-content .login-form button{
+  padding: 8px 15px;
+  background: rgb(39, 145, 194);
+  border: 2px solid rgb(39, 145, 194);
+  color: #fff;
+  font-size: 1.1rem;
+}
+.login-content .login-form button:hover{
+  background: transparent;
+}
+.login-content .login-form form .input-fields{
+  position: relative;
+}
+.login-content .login-form form .input-fields .login-icon{
+  position: absolute;
+  top: 30%;
+  right: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+.login-content .login-form form .error-alert{
+  color: rgb(243, 17, 17);
+  border: 1px solid rgb(243, 17, 17);
+  border-radius: 10px;
+  background: rgba(206, 102, 102, 0.3);
+}
+
+
+/* 404 page styles */
+.fourzero-content{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(17, 20, 54);
+  color: #fff;
+}
+.fourzero-content .icon-question{
+  font-size: 8rem;
+  color: #fff;
+}
+.fourzero-content button {
+  background: rgb(39, 145, 194);
+  color: #fff;
+  padding: 8px 15px;
+  font-size: 1.2rem;
+  border: 2px solid rgb(39, 145, 194);
+}
+
+
+/* NavBar */
+.sidebar{
+  width: 300px;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: rgb(17, 20, 54);
+  transition: 0.5s;
+}
+.sidebar .sidebar-brand{
+  height: 90px;
+  text-align: center;
+  padding: 2rem 2rem;
+  color: #fff;
+}
+.sidebar .sidebar-menu{
+  margin-top: 70px;
+  padding-left: .5rem;
+}
+.sidebar .sidebar-menu li{
+  width: 100%;
+  margin-bottom: 0.7rem;
+  list-style: none;
+}
+.sidebar .sidebar-menu li .a{
+  display: block;
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  transition: 0.3s;
+}
+.sidebar .sidebar-menu li .a .nav-text{
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+.sidebar .sidebar-menu li .a:hover{
+  background: rgb(10, 11, 26);
+}
+.sidebar .sidebar-menu li .a:hover .nav-text{
+  letter-spacing: 2px;
+}
+.main-content{
+  margin-left: 300px;
+  transition: all 0.5s;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s;
+}
+header h1{
+  cursor: pointer;
+  transition: all 0.5s;
+}
+header .user-wrapper{
+  display: flex;
+  align-items: center;
+}
+header .user-wrapper img{
+  width: 30px;
+  border: 1px solid rgb(17, 20, 54);
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  display: inline-block;
+}
+header .user-wrapper small{
+  margin-right: 10px;
+}
+header .user-wrapper .dropdown-content{
+  position: absolute;
+  right: 30px;
+  z-index: 2;
+  top: 60px;
+  background: #fff;
+  padding: 10px 10px 10px 12px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+header .user-wrapper .show-btn:hover .dropdown-content{
+  display: inline-block;
+}
+header .user-wrapper .dropdown-content .hide-link:hover{
+  background: rgb(189, 187, 187);
+}
+.content{
+  margin-left: 300px;
+}
+
+/* Admin Students */
+.search-bar{
+  position: relative;
+  display: inline-block;
+  margin-left: 40%;
+}
+.search-bar input{
+  padding: 8px 50px;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  outline: none;
+  border: 1px solid rgb(133, 132, 132);
+}
+.search-bar .search-icon{
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+.addStudent-btn{
+  position: relative;
+}
+.addStudent-btn .add-stu{
+  position: absolute;
+  right: 10%;
+}
+.stu-add-form{
+  margin-left: 12.5%;
+}
+
+.shortcut{
+  background: #0d6efd;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border: 3px solid #0d6efd;
+  transition: 0.3s ease-in-out;
+}
+.shortcut:hover{
+  background: transparent;
+  color: #0d6efd;
+}
+#show1{
+  display: none;
+}
+
+
+#dropdownTeacher{
+  position: absolute;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2;
+  top: 80px;
+  right: 13%;
+  box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.4);
+}
+#dropdownTeacher .hide-link{
+  width: 100%;
+  padding: 5px;
+}
+#dropdownTeacher .hide-link:hover{
+  background: rgb(189, 187, 187);
+}
+#burger-btn{
+  display: none;
+}
+.topnav-liks{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #fff;
+}
+.topnav-liks .close-btn{
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+.topnav-liks .content{
+  margin-top: 40%;
+}
+.topnav-liks .content ul{
+  list-style: none;
+}
+.topnav-liks .content ul li{
+  margin-top: 15px;
+  font-size: 1.3rem;
+}
+
+
+@media screen and (max-width : 1670px) {
+  #dropdownTeacher{
+    right: 8%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .login-content .login-form{
+    width: 70%;
+  }
+  .login-content .login-form form .input-fields .login-icon{
+    right: 60px;
+  }
+  #show1{
+    display: inline-block;
+  }
+  .sidebar{
+    width: 0px;
+  }
+  .main-content{
+    margin-left: 0px;
+  }
+  .sidebar-brand,
+  .sidebar-menu{
+    display: none;
+  }
+  .content{
+    margin-left: 0px;
+  }
+  #dropdownTeacher{
+    right: 6%;
+  }
+}
+@media screen and (max-width : 800px) {
+  .user-settings1{
+    display: none;
+  }
+  .nav-item{
+    display: none;
+  }
+  #burger-btn{
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 700px) {
+  .login-content .login-form{
+    width: 90%;
+  }
+  .login-content .login-form form .input-fields .login-icon{
+    right: 40px;
+  }
+  .stu-add-form{
+    margin-left: 0%;
+  }
+}
+@media screen and (max-width: 700px){
+  #dropdownTeacher{
+    right: 0%;
+  }
+}
